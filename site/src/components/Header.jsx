@@ -1,15 +1,10 @@
 import { useState } from 'react';
 
+
 function Header() {
     return (
         <div className='header'>
-            <ul className='left-side'>
-                <li>
-                    <div className="logo-img">
-                        <img className='logo' src="" alt="" />
-                    </div>
-                </li>
-            </ul>
+            <img className='logo' src='/Algoritmi-grafuri.png' alt="" />
             <ul className="right-side">
                 <li>
                     <button className="desc-button">Descriere</button>

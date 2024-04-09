@@ -1,0 +1,35 @@
+.container-start-page {
+    background: $main;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7%;
+    .circle {
+        background : $header;
+        border-radius: 50%;
+        width: 25%;
+        max-width: 600px;
+        aspect-ratio: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        text-align: center;
+        box-shadow: 3px 3px rgba(0, 0, 0, 0.3);
+    }
+    .buttons-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        button {
+            padding: 0.6em 2em;
+            border-radius: 12px;
+            background: $header;
+            border: none;
+            font-size: 1.05rem;
+            cursor: pointer;
+        }
+    }
+}
