@@ -12,9 +12,11 @@ function App() {
   const activateDescription = () => {
     setStartPageActive(false);
     setDescriptionPageActive(true);
+    setProjectPageActive(false);
   }
   const activateProjects = () => {
     setStartPageActive(false);
+    setDescriptionPageActive(false);
     setProjectPageActive(true);
   }
 
@@ -22,11 +24,17 @@ function App() {
     <>
     { descriptionPageActive || projectPageActive ?
       <div className="container">
-        <Header />
+        <Header activateDescription={activateDescription} activateProjects={activateProjects}/>
         {descriptionPageActive ?
-          <Main /> // desc
+          <>
+          description
+          <Main /> 
+          </>
           : 
-          <Main /> // project
+          <>
+          projects
+          <Main />
+          </>
         }
         <Footer />
       </div>
@@ -37,4 +45,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
