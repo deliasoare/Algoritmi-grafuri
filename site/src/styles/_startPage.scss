@@ -1,11 +1,12 @@
 .container-start-page {
-    background: $main;
+    overflow: auto;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 7%;
+    position: relative;
     .circle {
         background : $header;
         border-radius: 50%;
@@ -18,9 +19,13 @@
         font-size: 2rem;
         text-align: center;
         box-shadow: 3px 3px rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        position: relative;
     }
     .buttons-container {
         width: 100%;
+        position: relative;
+        z-index: 1;
         display: flex;
         justify-content: space-around;
         select {

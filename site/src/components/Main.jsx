@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 
-function Main() {
+function Main({activeProject}) {
     return (
         <div className='main'>
-            
+            {activeProject}
         </div>
     )
 }

@@ -9,6 +9,7 @@ function App() {
   const [descriptionPageActive, setDescriptionPageActive] = useState(false);
   const [projectPageActive, setProjectPageActive] = useState(false);
 
+  const [activeProject, setActiveProject] = useState('');
   const activateDescription = () => {
     setStartPageActive(false);
     setDescriptionPageActive(true);
@@ -20,26 +21,17 @@ function App() {
     setProjectPageActive(true);
   }
 
+
   return (
     <>
-    { descriptionPageActive || projectPageActive ?
+    { projectPageActive ?
       <div className="container">
-        <Header activateDescription={activateDescription} activateProjects={activateProjects}/>
-        {descriptionPageActive ?
-          <>
-          description
-          <Main /> 
-          </>
-          : 
-          <>
-          projects
-          <Main />
-          </>
-        }
+        <Header activateDescription={activateDescription} activateProjects={activateProjects} />
+          <Main activeProject={activeProject}/>
         <Footer />
       </div>
     :
-      <StartPage activateDescription={activateDescription} activateProjects={activateProjects}/>
+      <StartPage setActiveProject={setActiveProject} activateProjects={activateProjects}/>
     }
     </>
   )
